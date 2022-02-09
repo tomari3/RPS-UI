@@ -31,7 +31,7 @@
 
     So basically we want a program that take input R, P or S and return a random R, P or S from the computer. Then compares the two and return the result and keeps score (because why not). That does'nt sound so bad.
 
-    # Stage Two : Pseudocode (or any other set of instructions in 'not code')
+    # Stage Two : Pseudo-code (or any other set of instructions in 'not code')
     Get user input of RPS
     Generate computer output of random RPS
     Compare the user's input with the computer's output
