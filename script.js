@@ -1,9 +1,24 @@
-// Get user input of RPS
-let chooseTool = () => prompt('Rock, Paper or Scissors?', 'Rock')
-// Check if input is correct
-let a = 'Rock'
+// Set variables.
+let userScore = 0; //score counter for user.
+let computerScore = 0; //score counter for pc.
+let currState; // compares user input to pc input, outputs win, tie or lose.
+let userInput; // get user input, R P or S.
+let computerInput; // random output of R P or S.
+
+// Const both boolean condition but with three outcomes and feedback for user.
+const win = 'You win! Congrats.' 
+const lose = 'You lose, Awwww.'
+const tie = "It's a Tie!"
+
+// Start of actual code.
+
+let getUserInput = () => {
+    userInput = prompt('Rock, Paper or Scissors?', 'Rock');
+    return userInput.toLowerCase()
+}
+
+// Check if input is valid.
 let checkInput = (userInput) => {
-    // input = input.trim()
     if (userInput.toLowerCase().trim() == 'rock' ||
         userInput.toLowerCase().trim() == 'paper' ||
         userInput.toLowerCase().trim() == 'scissors') {
@@ -11,32 +26,64 @@ let checkInput = (userInput) => {
     }
     return false
 }
-console.log(checkInput(a)) //checkpoint
-// Generate computer output of random RPS
-// list of options
-let tools = ['rock', 'paper', 'scissors']
-let computerInput = () => tools[Math.floor(Math.random() * 3)];
-// for (let i = 0; i <=3; i++) {
-//     console.log(randomTool())
-// } check random output
-    
-// Compare the user's input with the computer's output
-// If 'Tie', repeat.
-let checkResult = (user, computer) => {
-    if (userInput == 'rock' || computerInput == 'scissors' ) {
-        return 'user won'
+
+// Generate computer output of random RPS.
+const RPS = ['rock', 'paper', 'scissors']
+let getComputerInput = () => {
+    computerInput = RPS[Math.floor(Math.random() * 3)]
+    return computerInput
+} 
+
+// Place result in array called outcome = [user, pc].
+let getResult = (userInput, computerInput) => {
+    outcome = [userInput.toLowerCase(), computerInput]
+    return outcome;
+}
+
+// Game rules table.
+let whoWins = (outcome) => {
+    if (outcome[0] == outcome[1]) {
+        currState = tie
+    } else if (outcome[0] == 'rock' && outcome[1] == 'scissors') {
+        currState = win
+    } else if (outcome[0] == 'rock' && outcome[1] == 'paper') {
+        currState = lose
+    } else if (outcome[0] == 'paper' && outcome[1] == 'rock') {
+        currState = win
+    } else if (outcome[0] == 'paper' && outcome[1] == 'scissors') {
+        currState = lose
+    } else if (outcome[0] == 'scissors' && outcome[1] == 'paper') {
+        currState = win
+    } else if (outcome[0] == 'scissors' && outcome[1] == 'rock') {
+        currState = win
     }
 }
-// Return the result of the match
-// Add score
-// End
 
-// Compiled function
-// let consoleRPS = () => {
-//     chooseTool()
-//     checkInput()
-// }
+// main function
+let console_RPS = () => {
+    getUserInput() 
+    console.log(`You chose: ${userInput.toUpperCase()}`)
+    if (!checkInput(userInput)) {
+        console.log('invalid, try again')
+        console_RPS()
+    } else {
+        getComputerInput();
+        console.log(`Computer chose: ${computerInput.toUpperCase()}`)
+        getResult(userInput, computerInput)
+        whoWins(outcome)
+        if (currState == tie) {
+            console.log(currState)
+        } else if (currState == win) {
+            console.log(currState)
+            userScore++
+        } else if (currState == lose) {
+            console.log(currState)
+            computerScore++
+        } 
 
-// Extras
-//console.log('Your input is incorrect, please choose Rock, Paper or Scissors.')
-//  || 'paper' || 'scissors' 
+    } console_RPS() // repeat for fun!
+    
+} 
+
+console_RPS()
+console.log(`The score is you:${userScore} computer:${computerScore} `)

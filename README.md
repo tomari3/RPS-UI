@@ -49,5 +49,9 @@
 
     From here I feel comfortable to dive into the code, maybe I'll come back here again.
 
+    # Stage Four : Conclusions
+    I finished the task without going back here, it took me about 2 hours.
+    I started using the Pseudo-code as a template and expanding it further into smaller sections, not everything came together so I started to code what I know. After playing with functions and making mistakes I had all my pieces done but apart and putting the together wasn't and easy task. It required to take a part formerly "complete" pieces of the puzzle and rearrange them. At the end I've got my desired result, I have a playable game with parsing, counting and loops. I'm sure there are better ways to do what I've and I am very excited to learn them in the future. If by any change you too are just starting to programming, I wish you a lot of luck and I hope you enjoyed and learned from my process.
+
 
     
