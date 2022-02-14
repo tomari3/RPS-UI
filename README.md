@@ -53,5 +53,21 @@
     I finished the task without going back here, it took me about 2 hours.
     I started using the Pseudo-code as a template and expanding it further into smaller sections, not everything came together so I started to code what I know. After playing with functions and making mistakes I had all my pieces done but apart and putting the together wasn't and easy task. It required to take a part formerly "complete" pieces of the puzzle and rearrange them. At the end I've got my desired result, I have a playable game with parsing, counting and loops. I'm sure there are better ways to do what I've and I am very excited to learn them in the future. If by any change you too are just starting to programming, I wish you a lot of luck and I hope you enjoyed and learned from my process.
 
+# Rock Paper Scissors from console interaction to UI interaction with JS DOM manipulation
+    
+    # Aim
+    Get three buttons to act as my user input - Rock, Paper and scissors buttons. each button will be a block of color with a logo at the middle of the corresponding
+    action, each button will cover a third of the screen. At the upper middle of the page, a logo of the game. At the lower middle of the page a score board. and a reset
+    button.
+
+    # Plan
+    Get and name the three main buttons.
+    Attach them to the user input as a fixed pre input - R P or S.
+    Make a little animation indicating the button was clicked.
+    Initiate the game() function when one of them is played.
+    Log the score and display it at the score board.
+    
+
+
 
     

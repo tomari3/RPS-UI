@@ -1,0 +1,277 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;800&display=swap');
+
+/*  main */
+body {
+    font-family: 'Mukta', sans-serif;
+    overflow: hidden;
+    color: aliceblue;
+}
+
+header {
+    background-image: url("boxing-ring.jpg");
+    /* Image from unsplash by Joel Muniz https://unsplash.com/photos/lUK16p_JtCM */
+    background-attachment: fixed;
+    background-position: right 20px bottom 10px;
+    background-size: cover;
+    transition: all 1.1s cubic-bezier(0.87, 0, 0.13, 1);
+    height: 4rem;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.credit {
+    font-size: 0.6em;
+    color: white;
+    text-decoration: none;
+}
+
+.credit p {
+    margin: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.credit a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.padding {
+    padding: 54rem 0 20px;
+}
+
+header h1 {
+    transition: all 1.3s cubic-bezier(0.87, 0, 0.13, 1);
+    color: aliceblue;
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.info {
+    height: 10rem;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info .match {
+    background-color: #060D1D;
+    border-top: 1px solid aliceblue;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.match div {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2 0 calc(100%/3);
+    font-size: 1rem;
+}
+
+.info .score-box {
+    color: #060D1D;
+    padding: 10px;
+    height: 3rem;
+    gap: 3px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.reset {
+    width: 100%;
+}
+
+.reset button {
+    padding: 14px;
+    border-style: none;
+    background-color: burlywood;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.tool {
+    width: 100%;
+    height: calc(100vh - 13rem);
+    flex: 1 1 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rock {
+    background-image: url("rock.jpg");
+    background-size: cover;
+    background-color: brown;
+
+}
+
+#paper {
+    background-image: url("tree.jpg");
+    background-size: cover;
+    background-color: teal;
+}
+
+#scissors {
+    background-image: url("cut.jpg");
+    background-size: cover;
+    background-color: chocolate;
+}
+
+.tool:hover {
+    filter: brightness(1.1);
+}

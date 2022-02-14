@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        a {
-            text-decoration: none;
-            font-size: 7rem;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 900;
-            color: darkgreen;
-            margin: auto;
-        }
-    </style>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
 </head>
-<body>
-    <a href="https://github.com/tomari3/console_RPS">console_RPS</a>
 
-    <script src="script.js">
-    </script>
+<body>
+    <div>
+        <header class="padding">
+            <h1 id="play">PLAY</h1>
+            <div class="credit">
+                <p> <a href="https://unsplash.com/photos/lUK16p_JtCM">Photo / Joel Muniz / Unsplash</a></p>
+            </div>
+        </header>
+        <section class="info">
+            
+            <div class="score-box">
+                <p class="state">READY?</p>
+                <p class="score">GO!</p>
+            </div>
+            <div class="match">
+                <div>
+                    <p id="user-input">You</p>
+                </div>
+                <div>
+                    <p>vs</p>
+                </div>
+                <div>
+                    <p id="computer-input">Computer</p>
+                </div>
+            </div>
+            <div class="reset">
+                <button class="reset">RESET</button>
+            </div>
+        </section>
+        <main>
+            <div class="tool" id="rock">
+                <p>rock</p>
+                <img src="" alt="">
+            </div>
+            <div class="tool" id="paper">
+                <p>paper</p>
+                <img src="" alt="">
+            </div>
+            <div class="tool" id="scissors">
+                <p>scissors</p>
+                <img src="" alt="">
+            </div>
+        </main>
+
+
 </body>
+
 </html>
